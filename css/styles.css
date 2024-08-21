@@ -6,19 +6,23 @@
   --accent: #e7e9fc; /* cornflower */
   --light: #f4f4fd; /* cloud */
   --primary-brand: #4d5ae5; /* iris */
+  --font-family: "Roboto", sans-serif;
+  --second-family: "Raleway", sans-serif;
 }
+/* main */
 body {
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-family);
+  font-size: 16px;
   color: var(--text);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
-footer {
-  background-color: var(--dark);
-}
-.footer-text {
-  color: var(--light);
-}
+
 .list {
   list-style: none;
+}
+.link {
+  text-decoration: none;
 }
 .visualli-hidden {
   position: absolute;
@@ -32,26 +36,14 @@ footer {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.hero-section {
-  background-color: var(--dark);
-}
-.title {
-  font-size: 56px;
-  line-height: 1.07;
-  color: var(--primary-white);
-}
-
-.link {
-  text-decoration: none;
-}
-
+/* logo */
 .logo {
   text-decoration: none;
   color: var(--primary-brand);
-  font-family: "Raleway";
+  font-family: var(--second-family);
   font-weight: 800;
   font-size: 18px;
-  line-height: 117%;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -61,6 +53,7 @@ footer {
 .footer-span {
   color: var(--primary-white);
 }
+/* header */
 .address-nav .link {
   color: var(--text);
   font-style: normal;
@@ -72,9 +65,6 @@ footer {
 .site-nav .link {
   color: var(--dark);
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -83,17 +73,41 @@ footer {
 .link.current {
   color: var(--pressed-state);
 }
+/* title */
 .section-title {
   color: var(--dark);
   font-weight: 700;
   font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
 }
-.team-section {
-  background-color: var(--light);
-}
+
 .section-subtitle {
   font-weight: 500;
   font-size: 20px;
+  line-height: 1.2;
+}
+/* hero */
+.hero-section {
+  background-color: var(--dark);
+}
+.hero-title {
+  font-size: 56px;
+  line-height: 1.1;
+  color: var(--primary-white);
+  text-align: center;
+}
+/* team */
+.team-section {
+  background-color: var(--light);
+}
+/* buttons */
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 .button.primary {
   background-color: var(--primary-brand);
@@ -112,4 +126,11 @@ footer {
 .button.secondary:focus {
   background-color: var(--pressed-state);
   color: var(--primary-white);
+}
+/* footer */
+footer {
+  background-color: var(--dark);
+}
+.footer-text {
+  color: var(--light);
 }
